@@ -29,7 +29,7 @@ def write_customers_to_csv(customers, file_path="output.csv"):
                 'customer': customer.id,
                 'available': customer.available,
                 'hold': customer.hold,
-                'total': customer.available + customer.hold,
+                'total':  customer.available + customer.hold,
                 'frozen': customer.frozen
             })
 

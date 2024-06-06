@@ -45,5 +45,7 @@ class TestBank(unittest.TestCase):
         self.bank.handle_transaction(withdraw_transaction)
         self.assertNotIn(1, self.bank.customers)
 
+        
+
 if __name__ == '__main__':
     unittest.main()

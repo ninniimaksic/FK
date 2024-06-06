@@ -44,7 +44,6 @@ class Bank:
             customer = self.customers[customer_id]
             if not customer.frozen:
                 customer.available += amount
-                
                 transaction = Transaction("deposit", customer_id, transaction_id, amount)
                 customer.transactions[transaction_id] = transaction
 

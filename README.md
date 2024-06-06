@@ -15,7 +15,7 @@ Installasjon
 
 2. I dag ligger det en input.csv fil med litt data som du kan bruke, eller så akn du oppdatere den
 
-3. Kjør python readTransaction input.csv
+3. Kjør python readTransactions.py input.csv
 
 4. Se resultatene i output.csv filen
 
