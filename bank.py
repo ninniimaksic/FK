@@ -18,7 +18,7 @@ class Bank:
         self.customers = {}
         self.transactions = {}           
 
-    
+
     def handle_transaction(self, transaction):
         type = transaction["type"]
         if type == TransactionType.DEPOSIT.value:
@@ -44,6 +44,7 @@ class Bank:
             customer = self.customers[customer_id]
             if not customer.frozen:
                 customer.available += amount
+                
                 transaction = Transaction("deposit", customer_id, transaction_id, amount)
                 customer.transactions[transaction_id] = transaction
 
@@ -115,3 +116,6 @@ class Bank:
             customer.frozen = True
         else:
             print("Only deposits can be disputed")
+
+
+            

@@ -8,3 +8,6 @@ class Customer:
     total: float
     frozen: bool
     transactions: dict
+
+
+    
