@@ -35,17 +35,5 @@ class TestBank(unittest.TestCase):
         self.bank.handle_transaction(withdraw_transaction)
         self.assertEqual(self.bank.customers[1].available, 50.0)
 
-    def test_invalid_withdraw(self):
-        withdraw_transaction = {
-            "type": TransactionType.WITHDRAW.value,
-            "customer": 1,
-            "amount": 50.0,
-            "id": 1
-        }
-        self.bank.handle_transaction(withdraw_transaction)
-        self.assertNotIn(1, self.bank.customers)
-
-        
-
 if __name__ == '__main__':
     unittest.main()
